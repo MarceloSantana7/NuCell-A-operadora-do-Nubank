@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*, body {
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+:root {
+  --purple: #820AD1;
+  --black: #191919;
+  --gray: #434343;
+  --grayLight: #F8F8F8;
+}
+
+header {
+  display: flex;
+  height: 55px;
+  background-color: var(--purple);
+  font-family: 'Ubuntu', sans-serif;
+  justify-content: center;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  max-width: 1280px;
+}
+
+.logo {
+  margin-left: 20px;
+  margin-right: 79px;
+}
+
+nav ul {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+nav li {
+  margin-right: 56px;
+  font-weight: 600;
+  color: white;
+}
+
+.main {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main > div {
+  width: 100%;
+  max-width: 1280px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.textMain {
+  margin-left: 16px;
+  font-size: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.textMain span:nth-child(1) {
+  margin-bottom: 10px;
+  color: var(--gray);
+}
+
+.textMain span:nth-child(2) {
+  color: var(--purple);
+}
+
+.secondary {
+  height: 192px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--grayLight);
+}
+
+.secondary > div {
+  width: 100%;
+  max-width: 1280px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.textSecondary {
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  color: var(--purple);
+  font-weight: 300;
+}
+
+.plans {
+  display: flex;
+  background-color: var(--purple);
+  min-height: 468px;  
+  justify-content: center;
+  align-items: center;
+  padding-top: 22px;
+}
+
+.plans > div {
+  width: 100%;
+  max-width: 1280px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: var(--purple);
+}
+
+.plans__text {
+  font-size: 28px;
+  color: white;
+  font-weight: 700;
+  margin-bottom: 26px;
+}
+
+.plans__group {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.plans__group__cards {
+  background-color: white;
+  border-radius: 11px;
+  height: 345px;
+  min-width: 276px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 12px;
+  margin: 10px 5px;
+}
+
+.plans__group__cards img {
+  height: 40px;
+  width: 40px;
+}
+
+.plans__group__cards > span:nth-child(1){
+  font-size: 57px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.plans__group__cards span:nth-child(2){
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 9px;
+}
+
+.plans__group__cards span:nth-of-type(3) {
+  font-size: 18px;
+  margin: 3px 0px;
+  display: block;
+}
+
+.plans__group__cards button {
+  background-color:var(--purple);
+  height: 40px;
+  width: 241px;
+  border: 0;
+  border-radius: 25px;
+  color: white;
+  font-size: 22px;
+  line-height: 22px;
+}
+
+
+.plans__benefits {
+  margin-top: 13px;
+  color: black;
+}
+
+.plans__benefits li {
+  list-style-type:disc;
+  margin-bottom: 8px;
+  color: var(--purple);
+}
+
+.plans__benefits li > span{
+  display: flex;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.plans__price {
+  font-size: 31px;
+  font-weight: 800;
+}
+
+.plans__price > span{
+  font-size: 53px;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+
+  .main {
+    height: 100%;
+    padding: 20px 0px;
+  }
+
+  .main > div {
+    flex-direction: column;
+  }
+
+  .secondary {
+    padding: 0px 10px;
+  }
+
+  .textMain {
+    font-size: 25px;
+  }
+
+  .textSecondary {
+    font-size: 20px;
+  }
+}

@@ -207,6 +207,34 @@ nav li {
   font-size: 53px;
 }
 
+/* Chip */
+
+.chip {
+  display: flex;
+  background-color: var(--grayLight);
+  min-height: 346px;  
+  justify-content: center;
+  align-items: center;
+  padding-top: 22px;
+}
+
+.chip > div {
+  width: 100%;
+  max-width: 1280px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  color: var(--purple);
+}
+
+.chip h3 {
+  font-size: 51px;
+}
+
+
+
+
 /* Responsive */
 
 @media (max-width: 600px) {

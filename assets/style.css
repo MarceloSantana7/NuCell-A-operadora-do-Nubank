@@ -1,15 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
-*, body {
+*,
+body {
   box-sizing: border-box;
   font-family: 'Ubuntu', sans-serif;
 }
 
 :root {
-  --purple: #820AD1;
+  --purple: #820ad1;
   --black: #191919;
   --gray: #434343;
-  --grayLight: #F8F8F8;
+  --grayLight: #f8f8f8;
+  --borderGray: #d1d1d1;
 }
 
 header {
@@ -33,6 +35,11 @@ nav {
   margin-right: 79px;
 }
 
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
 nav ul {
   display: flex;
   height: 100%;
@@ -43,6 +50,17 @@ nav li {
   margin-right: 56px;
   font-weight: 600;
   color: white;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0);
+  transition: all 0.3s linear;
+}
+
+nav li:hover {
+  cursor: pointer;
+  border-bottom: 2px solid white;
+  transition: all 0.3s linear;
 }
 
 .main {
@@ -58,6 +76,7 @@ nav li {
   height: 100%;
   display: flex;
   align-items: center;
+  padding: 0px 20px;
 }
 
 .textMain {
@@ -91,6 +110,7 @@ nav li {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0px 20px;
 }
 
 .textSecondary {
@@ -104,7 +124,7 @@ nav li {
 .plans {
   display: flex;
   background-color: var(--purple);
-  min-height: 468px;  
+  min-height: 468px;
   justify-content: center;
   align-items: center;
   padding-top: 22px;
@@ -118,6 +138,7 @@ nav li {
   align-items: center;
   flex-direction: column;
   color: var(--purple);
+  padding: 0px 20px;
 }
 
 .plans__text {
@@ -151,13 +172,13 @@ nav li {
   width: 40px;
 }
 
-.plans__group__cards > span:nth-child(1){
+.plans__group__cards > span:nth-child(1) {
   font-size: 57px;
   font-weight: 500;
   margin-bottom: 5px;
 }
 
-.plans__group__cards span:nth-child(2){
+.plans__group__cards span:nth-child(2) {
   font-size: 15px;
   font-weight: 500;
   margin-bottom: 9px;
@@ -170,7 +191,7 @@ nav li {
 }
 
 .plans__group__cards button {
-  background-color:var(--purple);
+  background-color: var(--purple);
   height: 40px;
   width: 241px;
   border: 0;
@@ -178,8 +199,14 @@ nav li {
   color: white;
   font-size: 22px;
   line-height: 22px;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
+.plans__group__cards button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
 
 .plans__benefits {
   margin-top: 13px;
@@ -187,12 +214,12 @@ nav li {
 }
 
 .plans__benefits li {
-  list-style-type:disc;
+  list-style-type: disc;
   margin-bottom: 8px;
   color: var(--purple);
 }
 
-.plans__benefits li > span{
+.plans__benefits li > span {
   display: flex;
   font-size: 12px;
   margin-top: 4px;
@@ -203,7 +230,7 @@ nav li {
   font-weight: 800;
 }
 
-.plans__price > span{
+.plans__price > span {
   font-size: 53px;
 }
 
@@ -212,7 +239,7 @@ nav li {
 .chip {
   display: flex;
   background-color: var(--grayLight);
-  min-height: 346px;  
+  min-height: 346px;
   justify-content: center;
   align-items: center;
   padding-top: 22px;
@@ -226,18 +253,183 @@ nav li {
   align-items: center;
   flex-direction: row;
   color: var(--purple);
+  padding: 0px 20px;
+}
+
+.chip img {
+  margin-right: 15px;
 }
 
 .chip h3 {
   font-size: 51px;
 }
 
+.chip h1 {
+  margin-top: 15px;
+  font-size: 20px;
+}
 
+.benefits {
+  display: flex;
+  background-color: white;
+  min-height: 198px;
+  justify-content: center;
+  align-items: center;
+}
 
+.benefits > div {
+  width: 100%;
+  max-width: 1280px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  color: var(--purple);
+  flex-wrap: wrap;
+  padding: 0px 20px;
+}
+
+.benefits__card {
+  display: flex;
+  height: 168px;
+  width: 352px;
+  border-radius: 10px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 25px;
+  border: 1px solid var(--borderGray);
+  box-shadow: 3px 3px 8px rgb(0 0 0 / 12%);
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: var(--gray);
+}
+
+.benefits__card__info {
+  font-size: 24px;
+}
+
+.benefits__card__icon {
+  width: 100px;
+  justify-content: flex-end;
+  align-items: flex-end;
+  display: flex;
+}
+
+.portabilidade {
+  display: flex;
+  background-color: var(--purple);
+  min-height: 231px;
+  justify-content: center;
+  align-items: center;
+}
+
+.portabilidade > div {
+  width: 100%;
+  max-width: 1280px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  color: white;
+  padding: 0px 20px;
+}
+
+.portabilidade__info {
+  flex: 1;
+}
+
+.portabilidade__img {
+  flex: 1;
+  width: 100%;
+}
+
+.portabilidade h3 {
+  font-size: 22px;
+}
+
+.portabilidade h2 {
+  font-size: 38px;
+  font-weight: 700;
+  margin: 6px 0px;
+}
+
+footer {
+  display: flex;
+  background-color: var(--black);
+  min-height: 231px;
+  justify-content: center;
+  align-items: center;
+}
+
+footer > div {
+  width: 100%;
+  max-width: 1280px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  color: white;
+  justify-content: space-between;
+  padding: 0px 20px;
+}
+
+.footer__info {
+  width: 100%;
+  text-align: center;
+}
 
 /* Responsive */
 
 @media (max-width: 600px) {
+  header {
+    height: 100%;
+  }
+
+  nav {
+    flex-direction: column;
+    height: 100%;
+    padding: 10px;
+  }
+
+  .logo {
+    margin: 0px;
+    margin-bottom: 10px;
+  }
+
+  nav ul {
+    width: 100%;
+    padding: 0px 40px;
+    justify-content: space-between;
+  }
+
+  nav li {
+    margin: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0);
+    transition: all 0.3s linear;
+  }
+
+  nav li:hover {
+    cursor: pointer;
+    border-bottom: 2px solid white;
+    transition: all 0.3s linear;
+  }
+
+  .chip > div {
+    padding: 0px 20px;
+  }
+
+  .chip h3 {
+    font-size: 30px;
+  }
+
+  .chip h1 {
+    font-size: 18px;
+  }
 
   .main {
     height: 100%;
@@ -259,4 +451,32 @@ nav li {
   .textSecondary {
     font-size: 20px;
   }
+
+  .benefits > div {
+    justify-content: center;
+    padding-top: 20px;
+  }
+
+  footer > div {
+    flex-direction: column;
+  }
+
+  .footer__info {
+    margin-top: 30px;
+  }
+
+  .portabilidade > div {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .portabilidade__info {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 18px 0px;
+}
 }
